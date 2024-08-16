@@ -35,7 +35,7 @@ const EditContact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        actions.editContact(params.id, contact);
+        actions.editContacts(params.id, contact);
 
         navigate("/");
     }
@@ -89,7 +89,7 @@ const EditContact = () => {
                         placeholder="Enter phone"
                         onChange={(e) => {
                             handleChange(e);
-                        }} adress
+                        }} 
                         required
                     />
                 </div>

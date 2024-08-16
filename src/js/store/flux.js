@@ -1,4 +1,4 @@
-import { DataRouterContext } from "react-router/dist/lib/context";
+
 
 const getState = ({ getStore, getActions, setStore }) => {
 
@@ -46,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			contacts: []
 		},
 		actions: {
-			getContacts: fetchContacts(),
+			getContacts: fetchContacts,
 
 			addContacts: (contactData) => {
 				fetch("https://playground.4geeks.com/contact/agendas/GaretKean/contacts", {
@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch((error) => console.error("Updating contact failed", error));
 			},
 
-			addAgendaSlug: addAgendaSlug()
+			addAgendaSlug: addAgendaSlug
 		}
 	};
 };
